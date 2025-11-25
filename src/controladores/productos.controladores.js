@@ -16,6 +16,17 @@ export const createProducto = async (req, res) => {
   res.json({ message: "Producto creado", id: result });
 };
 
+export const updateProducto = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    await productoServicios.updateProducto(id, req.body);
+    res.json({ message: "Producto actualizado" });
+  } catch (err) {
+    res.status(500).json({ error: "Error al actualizar producto" });
+  }
+};
+
 export const deleteProducto = async (req, res) => {
   await productoServicios.deleteProducto(req.params.id);
   res.json({ message: "Producto eliminado" });

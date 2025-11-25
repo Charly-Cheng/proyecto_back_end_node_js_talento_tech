@@ -18,9 +18,8 @@ app.use("/api/products", productosRutas);
 app.use("/auth", authRutas);
 
 // inicio /
-// 
 app.get("/", (req, res) => {
-  res.send({Mensage:"Bienvenido al servidor"});
+  res.send({Mensage:"Bienvenido al servidor API"});
 
 
 });

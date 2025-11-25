@@ -3,7 +3,8 @@ import {
   getProductos,
   getProductoById,
   createProducto,
-  deleteProducto
+  deleteProducto,
+  updateProducto
 } from "../controladores/productos.controladores.js";
 
 import authMiddleware from "../middleware/auth.middleware.js";
@@ -14,6 +15,8 @@ const router = express.Router();
 router.get("/", authMiddleware, getProductos);
 router.get("/:id", authMiddleware, getProductoById);
 router.post("/create", authMiddleware, createProducto);
+router.put("/:id", authMiddleware, updateProducto);
+
 router.delete("/:id", authMiddleware, deleteProducto);
 
 export default router;
