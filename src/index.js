@@ -17,6 +17,14 @@ app.use(bodyParser.json());
 app.use("/api/products", productosRutas);
 app.use("/auth", authRutas);
 
+// inicio /
+// 
+app.get("/", (req, res) => {
+  res.send({Mensage:"Bienvenido al servidor"});
+
+
+});
+
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: "Ruta no encontrada" });
