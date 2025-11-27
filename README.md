@@ -97,7 +97,7 @@ Authorization: Bearer <token>
 
 | Método | Ruta                 | Descripción                 | Protegida |
 | ------ | -------------------- | --------------------------- | --------- |
-| GET    | /api/products        | Obtener todos los productos | Sí        |
+| GET    | /api/products        | Obtener todos los productos | No        |
 | GET    | /api/products/:id    | Obtener producto por ID     | Sí        |
 | POST   | /api/products/create | Crear un nuevo producto     | Sí        |
 | PUT    | /api/products/:id    | Actualizar un producto      | Sí        |
