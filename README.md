@@ -18,7 +18,7 @@ La arquitectura está organizada en capas separadas:
 * **Middleware**
 * **Firebase Firestore**
 
-El proyecto está listo para desplegarse en **Vercel**, **Render**, **Railway**, o cualquier hosting Node.js.
+El proyecto está listo para desplegarse en **Vercel**, o cualquier hosting Node.js.
 
 ---
 
@@ -111,7 +111,6 @@ Authorization: Bearer <token>
 
 ```
 GET /api/products
-Authorization: Bearer <token>
 ```
 
 ---
@@ -165,7 +164,7 @@ Authorization: Bearer <token>
 
 ## 📌 Notas Importantes
 
-* Todas las rutas de productos requieren **token JWT**.
+* Menos GET / y /api/products,  restos las rutas de productos requieren **token JWT**.
 * La colección de Firestore debe llamarse **products**.
 * API organizada de forma modular y escalable.
 
